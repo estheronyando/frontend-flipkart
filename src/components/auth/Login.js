@@ -192,7 +192,7 @@ function Login() {
           phone: values.phone,
           password: values.password,
         },{
-          credentials:"include",
+          withCredentials: true,
         });
         console.log(data)
         const { isAuth, user } = await authentication();
