@@ -3,7 +3,7 @@ import axios from "../adapters/axios";
 const authentication = async () => {
   try {
     const { data } = await axios.get("/accounts/authentication", {
-      credentials: "include",
+      withCredentials: "true",
     });
     console.log(data)
     return {
